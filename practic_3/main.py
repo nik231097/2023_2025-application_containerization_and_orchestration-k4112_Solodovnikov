@@ -1,8 +1,7 @@
-# main.py для практической работы 3
+from fastapi import FastAPI
 
-def hello():
-    print("Hello from practic_3!")
+app = FastAPI()
 
-
-if __name__ == "__main__":
-    hello()
+@app.get("/")
+def read_root():
+    return {"message": "Hello from Practic 3"}
