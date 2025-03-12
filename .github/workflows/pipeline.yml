@@ -41,14 +41,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-<<<<<<< HEAD
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/microservice:latest -f practic_3/Dockerfile practic_3/
-=======
-      - name: Build Docker Image- name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/microservice:latest -f practic_3/Dockerfile practic_3/
-
->>>>>>> 3ad774dbac94082c92a8641b4e31ade840e6c0bb
+        run: docker build -t nik231097/microservice:latest -f practic_3/Dockerfile practic_3/
 
       - name: Push Docker Image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/microservice:latest
@@ -67,5 +61,5 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "CI/CD Pipeline Completed"
           body: "CI/CD Pipeline успешно завершен!"
-          to: "your-email@example.com"
+          to: "nik231097@yandex.ru"
           from: "GitHub Actions"
