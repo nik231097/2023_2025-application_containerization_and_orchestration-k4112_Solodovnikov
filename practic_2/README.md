@@ -5,14 +5,6 @@
 В данной работе была развернута база данных PostgreSQL в Minikube и настроено подключение микросервиса к базе данных.
 
 
-
-## Цель работы
-- Изучить принципы работы с базами данных в микросервисной архитектуре.  
-- Развернуть PostgreSQL в Minikube.  
-- Настроить подключение микросервиса к базе данных.
-
-
-
 ## Структура проекта
 
 ```plaintext
@@ -50,7 +42,7 @@ psql -h localhost -U user -d microservice_db
 
 
 
-##  Пример `postgres-deployment.yaml`
+##  Файл `postgres-deployment.yaml`
 
 ```yaml
 apiVersion: apps/v1
@@ -83,7 +75,7 @@ spec:
 
 
 
-## Пример `postgres-service.yaml`
+## Файл `postgres-service.yaml`
 
 ```yaml
 apiVersion: v1
@@ -117,8 +109,8 @@ CREATE TABLE users (
 - Добавляем тестовые данные:
 
 ```sql
-INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
-INSERT INTO users (name, email) VALUES ('Bob', 'bob@example.com');
+INSERT INTO users (name, email) VALUES ('Nikolay', 'nikolay@yandex.ru');
+INSERT INTO users (name, email) VALUES ('Alina', 'alina@yandex.ru');
 ```
 
 - Проверяем данные:

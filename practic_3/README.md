@@ -9,12 +9,6 @@
 - Отправка уведомлений по email при завершении пайплайна.
 
 
-## Цель работы
-1. Изучить и реализовать основные идеи **Continuous Integration (CI)** и **Continuous Deployment (CD)**.  
-2. Автоматизировать процесс тестирования, сборки и развертывания микросервиса.  
-3. Настроить уведомления о завершении пайплайна.
-
-
 ## Структура репозитория
 
 ```plaintext
@@ -69,7 +63,7 @@ practic_3/
     password: ${{ secrets.EMAIL_PASSWORD }}
     subject: "CI/CD Pipeline Completed"
     body: "CI/CD Pipeline успешно завершен!"
-    to: "your-email@example.com"
+    to: "nik231097@yandex.ru"
     from: "GitHub Actions"
 ```
 
@@ -83,8 +77,8 @@ practic_3/
 |----------------------|--------------|
 | `DOCKERHUB_USERNAME` | Логин от Docker Hub |
 | `DOCKERHUB_PASSWORD` | Пароль от Docker Hub |
-| `EMAIL_USERNAME`     | Email для отправки уведомлений (например, `your-email@gmail.com`) |
-| `EMAIL_PASSWORD`     | Пароль или **App Password** для авторизации через SMTP |
+| `EMAIL_USERNAME`     | Email для отправки уведомлений |
+| `EMAIL_PASSWORD`     | Пароль для авторизации через SMTP |
 
 
 
